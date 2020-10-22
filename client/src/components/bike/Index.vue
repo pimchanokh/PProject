@@ -1,22 +1,18 @@
 <template>
 <div>
-<h2>รายชื่อผู้ใช้งานทั้งหมด</h2>
-<h4>จํานวนผู้ใช้งานทั้งหมด {{users.length}}</h4>
-<p><button v-on:click="navigateTo('/user/create')">สร้างผู้ใช้งาน</button></p>
+<h2>ประเภทจักรยาน</h2>
 <p><button v-on:click="logout">ออกจากระบบ</button></p>
-<div v-for="user in users" v-bind:key="user.id">
-<p>id: {{ user.id }}</p>
-<p>ชือ-นามสกุล: {{ user.name }} - {{ user.lastname }}</p>
-<p>email: {{ user.email }}</p>
-<p>password: {{ user.password }}</p>
+<p>id:1</p>
+<p>ประเภท: จักรยาน 1 ที่นั่ง</p>
 <p>
-<button v-on:click="navigateTo('/user/'+ user.id)">ดูข้อมูลผู้ใช้</button>
-<button v-on:click="navigateTo('/user/edit/'+ user.id)">แก้ไขข้อมูล
-</button>
-<button v-on:click="deleteUser(user)">ลบข้อมูล</button>
+<button v-on:click="navigateTo('/bike/bikeReturn')">ยืมจักรยาน</button>
+</p>
+<p>id:2</p>
+<p>ประเภท: จักรยาน 2 ที่นั่ง</p>
+<p>
+<button v-on:click="navigateTo('/bike/bikeReturn')">ยืมจักรยาน</button>
 </p>
 <hr>
-</div>
 </div>
 </template>
 <script>
